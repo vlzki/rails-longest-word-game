@@ -1,0 +1,21 @@
+<div class="container">
+  <h3 class="text-center">******** Welcome to the longest word-game !********</h3>
+  <h4 class="text-center">Here is your grid :</h4>
+
+  <div class="text-center">
+    <ul class= "list-inline">
+    <% @grid.each do |letter| %>
+      <li><%= letter %></li>
+    <% end %>
+    </ul>
+  </div>
+
+  <form action="<%= score_path %>" class="text-center">
+    <div class="form-group">
+      <label for="letter">Give me your word :   </label>
+      <input type="text" class="form-group input-lg" name="word" id="word" placeholder="Jane Doe">
+
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+  </form>
+</div>
